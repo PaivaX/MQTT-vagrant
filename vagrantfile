@@ -1,0 +1,36 @@
+# -*- mode: ruby -*-
+
+Vagrant.configure("2") do |config|
+  # Pasta partilhada 
+  config.vm.synced_folder "./share", "/home/vagrant/share", type: "virtualbox"
+  config.vm.box = "ubuntu/focal64"	
+  
+  # Primeira máquina virtual
+  config.vm.define "mqtt-broker" do |ubuntu|
+    ubuntu.vm.provider :virtualbox do |vb|
+      vb.name = "mqtt-broker"
+	  vb.memory = 1024
+	end
+	
+    ubuntu.vm.box = "ubuntu/focal64"# box para o Ubuntu 20.04 LTS
+    ubuntu.vm.network "public_network", dhcp: true
+	#config.vm.network "public_network", ip: "192.168.8.10" # definir IP estatico
+	
+    ubuntu.vm.provision "shell", path: "install_mosquitto.sh"
+  end
+
+  # Segunda máquina virtual
+  config.vm.define "mqtt_explorer" do |mqtt|
+    mqtt.vm.box = "ubuntu/focal64"
+    mqtt.vm.network "public_network", dhcp: true
+    mqtt.vm.provision "shell", inline: <<-SHELL
+      sudo apt-get update
+      sudo apt-get install -y snapd
+      sudo snap install mqtt-explorer
+    SHELL
+  end
+
+
+end
+
+
