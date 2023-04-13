@@ -1,2 +1,2 @@
 vagrant ssh
-mosquitto_sub -u pico -P 13149p -t "home/lights/kitchen"
+mosquitto_sub -h <ip> -u pico -P pico -t "home/lights/kitchen"
