@@ -1,15 +1,20 @@
  
 # Projeto MQTT Broker 
 Criação de um ambiente de desenvolvimento, utilizando o Vagrant em conjunto com o VirtualBox, e utilizando o equipamento IOT Raspberry pico W.
-Foram definidos alguns requesitos, e implementados no projeto.
+Foram definidos alguns requisitos, e implementados no projeto.
 
 
 
 # Índice  
 1. [Introdução](#projeto-mqtt-broker)  
-2. [Tech Stack](#tech-stack)  
-    1. [Sub paragraph](#subparagraph1)  
-3. [Another paragraph](#paragraph2)  
+2. [Tech Stack](#tech-stack)    
+3. [Características](#Características) 
+4. [O que aprendi?](#)
+5. [Iniciar o projeto](#)
+6. [Variáveis](#)
+7. [Relatório](#)
+8. [Licença] (#)
+
 
 ## Screenshots  
 
@@ -23,7 +28,7 @@ Foram definidos alguns requesitos, e implementados no projeto.
 
 **Raspberry Pico:** MycroPython
 
-## Features  
+## Características  
 
 - Light/dark mode toggle  
 - Live previews  
@@ -44,7 +49,7 @@ Clonar o projeto
   git clone https://github.com/PaivaX/MQTT-vagrant.git
 ~~~
 
-Ir para o directório do projeto  
+Ir para o diretório do projeto  
 
 ~~~bash  
   cd vagrant-mqtt
@@ -62,14 +67,14 @@ Start the server
 npm run start
 ~~~
 
-## Environment Variables  
+## Variáveis  
 
 To run this project, you will need to add the following environment variables to your .env file  
 `API_KEY`  
 
 `ANOTHER_API_KEY` 
 
-## Acknowledgements  
+## Bibliografia  
 
 - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
 - [Awesome README](https://github.com/matiassingers/awesome-readme)
@@ -77,8 +82,13 @@ To run this project, you will need to add the following environment variables to
 
 ## Relatório  
 
-If you have any feedback, please reach out to us at fake@fake.com
+Escrever relatório
 
-## License  
+## Licença  
 
-[MIT](https://choosealicense.com/licenses/mit/)
+Este é um software gratuito e sem custo distribuído no domínio público.
+
+Qualquer pessoa é livre para copiar, modificar, publicar, usar, compilar, vender ou
+distribuir este software, seja em forma de código-fonte ou compilado, para qualquer finalidade, comercial ou não comercial.
+
+Para mais informações, <https://unlicense.org>
