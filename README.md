@@ -12,6 +12,7 @@ Foram definidos alguns requisitos, e implementados no projeto.
 4. [O que aprendi?](#o-que-aprendi)
 5. [Iniciar o projeto](#iniciar-o-projeto)
 6. [Variáveis](#variáveis)
+7. [Comandos úteis](#comandos-úteis)
 7. [Relatório](#relatório)
 8. [Bibliografia](#Bibliografia)
 9. [Licença](#Licença)
@@ -81,6 +82,45 @@ Definir o user e password, no ficheiro "install_mosquitto.sh":
 Para alterar o tópico, deve ser alterado no ficheiro mqtt_sub.py
 
 `topic` 
+
+
+## Comandos úteis
+
+Entrar no SSH da VM.
+~~~bash 
+vagrant ssh <nome_vm>
+~~~
+
+Iniciar VM
+
+~~~bash
+vagrant up <nome_vm>
+~~~
+
+Desligar VM
+
+~~~bash
+vagrant halt
+~~~~
+
+Destruir VM. O código-fonte e o conteúdo do diretório de dados permanecerão inalterados. 
+Somente a instância da máquina VirtualBox será destruída. Pode-se construir a VM com o comando 'vagrant up'.
+Este comando é útil se você deseja economizar espaço em disco.
+#### Aviso: este comando destruirá os bancos de dados do seu site.
+Backup da BD: sql-dump > db.sql 
+~~~bash 
+vagrant destroy
+~~~
+
+Reconfigurar VM depois de alterações ao código fonte.
+~~~bash
+vagrant provision
+~~~
+
+Recarregar VM. Útil quando se altera as propriedades de rede.
+~~~bash$
+vagrant reload
+~~~
 
 ## Relatório  
 
