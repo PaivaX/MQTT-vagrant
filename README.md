@@ -9,11 +9,12 @@ Foram definidos alguns requisitos, e implementados no projeto.
 1. [Introdução](#projeto-mqtt-broker)  
 2. [Tech Stack](#tech-stack)    
 3. [Características](#Características) 
-4. [O que aprendi?](#)
-5. [Iniciar o projeto](#)
-6. [Variáveis](#)
-7. [Relatório](#)
-8. [Licença] (#)
+4. [O que aprendi?](#o-que-aprendi)
+5. [Iniciar o projeto](#iniciar-o-projeto)
+6. [Variáveis](#variáveis)
+7. [Relatório](#relatório)
+8. [Bibliografia](#Bibliografia)
+9. [Licença](#Licença)
 
 
 ## Screenshots  
@@ -30,16 +31,25 @@ Foram definidos alguns requisitos, e implementados no projeto.
 
 ## Características  
 
-- Light/dark mode toggle  
-- Live previews  
-- Fullscreen mode  
-- Cross platform 
+VM´s:
+- Instalação e configuração automática das VM   
+- Instalação e configuração do broker Mosquitto  
+- Instalação do cliente paho MQTT  
+
+Raspberry Pico w:
+- Ligar ao wireless com indicação Led de sucesso e mensagem
+- Ligação ao broker
+- Envio da temperatura
+- Receção de instrução para Ligar/desligar Led 
 
 ## O que aprendi?  
 
 A configurar o Vagrantfile, para duas máquinas virtuais, com especificações distintas.
 
 A criar scripts SHELL, para instalar módulos e configurar os mesmos.
+
+A configurar o raspberry Pico W, para ligar ao Wireless, Broker, e publicação e subscrição de tópicos MQTT
+
 
 ## Iniciar o projeto 
 
@@ -61,28 +71,27 @@ Iniciar as VM
 vagrant up
 ~~~
 
-Start the server  
-
-~~~bash  
-npm run start
-~~~
-
 ## Variáveis  
 
-To run this project, you will need to add the following environment variables to your .env file  
-`API_KEY`  
+Definir o user e password, no ficheiro "install_mosquitto.sh":  
+`user`
 
-`ANOTHER_API_KEY` 
+`password`  
 
-## Bibliografia  
+Para alterar o tópico, deve ser alterado no ficheiro mqtt_sub.py
 
-- [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
-- [Awesome README](https://github.com/matiassingers/awesome-readme)
-- [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+`topic` 
 
 ## Relatório  
 
 Escrever relatório
+
+## Bibliografia  
+
+- [Peppe8o](https://peppe8o.com/mqtt-and-raspberry-pi-pico-w-start-with-mosquitto-micropython/)
+- [Steve´s Internet Guide](http://www.steves-internet-guide.com/mqtt/)
+- [Tomshardware](https://www.tomshardware.com/how-to/connect-raspberry-pi-pico-w-to-the-internet)
+
 
 ## Licença  
 
