@@ -1,13 +1,13 @@
  
 # Projeto MQTT Broker 
 Criação de um ambiente de desenvolvimento, utilizando o Vagrant em conjunto com o VirtualBox, e utilizando o equipamento IOT Raspberry pico W.
-Foram definidos alguns requesitos, e
+Foram definidos alguns requesitos, e implementados no projeto.
 
 
 
-# Table of contents  
-1. [Introduction](#introduction)  
-2. [Some paragraph](#paragraph1)  
+# Índice  
+1. [Introdução](#projeto-mqtt-broker)  
+2. [Tech Stack](#tech-stack)  
     1. [Sub paragraph](#subparagraph1)  
 3. [Another paragraph](#paragraph2)  
 
@@ -30,28 +30,30 @@ Foram definidos alguns requesitos, e
 - Fullscreen mode  
 - Cross platform 
 
-## Lessons Learned  
+## O que aprendi?  
 
-What did you learn while building this project? What challenges did you face and how did you overcome t
+A configurar o Vagrantfile, para duas máquinas virtuais, com especificações distintas.
 
-## Run Locally  
+A criar scripts SHELL, para instalar módulos e configurar os mesmos.
 
-Clone the project  
+## Iniciar o projeto 
+
+Clonar o projeto  
 
 ~~~bash  
-  git clone https://link-to-project
+  git clone https://github.com/PaivaX/MQTT-vagrant.git
 ~~~
 
-Go to the project directory  
+Ir para o directório do projeto  
 
 ~~~bash  
-  cd my-project
+  cd vagrant-mqtt
 ~~~
 
-Install dependencies  
+Iniciar as VM  
 
 ~~~bash  
-npm install
+vagrant up
 ~~~
 
 Start the server  
